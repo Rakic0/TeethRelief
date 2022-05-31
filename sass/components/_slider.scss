@@ -1,0 +1,142 @@
+.slider {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+  height: 50rem;
+  overflow: hidden;
+
+  @media only screen and (max-width: 58.25em) {
+    overflow: visible;
+    height: auto;
+  }
+
+  &__btn {
+    border: none;
+    background-color: var(--color-white);
+    padding: 1rem;
+    font-size: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+
+    @media only screen and (max-width: 58.25em) {
+      display: none;
+    }
+
+    &--left {
+      top: 50%;
+      left: 24%;
+
+      @media only screen and (max-width: 109em) {
+        left: 20%;
+      }
+
+      @media only screen and (max-width: 95em) {
+        left: 15%;
+      }
+
+      @media only screen and (max-width: 82em) {
+        left: 10%;
+      }
+    }
+
+    &--right {
+      top: 50%;
+      right: 24%;
+      @media only screen and (max-width: 109em) {
+        right: 20%;
+      }
+      @media only screen and (max-width: 95em) {
+        right: 15%;
+      }
+      @media only screen and (max-width: 82em) {
+        right: 10%;
+      }
+    }
+  }
+}
+
+.slide {
+  position: absolute;
+  top: 5rem;
+  width: 100%;
+  height: 50rem;
+  transition: all 1s;
+
+  @media only screen and (max-width: 58.25em) {
+    position: static;
+    transform: translate(0) !important;
+    height: auto;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .heading-tertiary {
+    color: var(--color-white);
+  }
+}
+
+.testemonial {
+  padding: 3rem;
+
+  @media only screen and (max-width: 109em) {
+    background-color: rgba(#000000, 0.2);
+    border-radius: 10px;
+  }
+
+  &__background {
+    @include cntrPos;
+    width: 100rem;
+    z-index: 0;
+  }
+
+  &__header {
+    position: relative;
+  }
+
+  &__body {
+    width: 90%;
+  }
+
+  &__customer {
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    column-gap: 2rem;
+    @media only screen and (min-width: 130em) {
+      column-gap: 3.5rem;
+    }
+  }
+
+  &__customer-face {
+    width: 6rem;
+    border-radius: 50%;
+    margin-right: $mb-small;
+    grid-row: 1/3;
+
+    @media only screen and (min-width: 130em) {
+      width: 8rem;
+      gap: 3rem;
+    }
+  }
+
+  &__customer-name {
+    font-size: 2rem;
+
+    @media only screen and (min-width: 130em) {
+      font-size: 2.3rem;
+    }
+  }
+
+  &__customer-location {
+    font-size: 1.3rem;
+
+    @media only screen and (min-width: 130em) {
+      font-size: 1.6rem;
+    }
+  }
+}

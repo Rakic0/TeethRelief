@@ -1,0 +1,82 @@
+.section {
+  padding: 10rem 0;
+  background-color: #f7f7f7;
+  transition: all 1s;
+
+  &-about {
+    @media only screen and (max-width: 82em) {
+      .grid--2-col {
+        grid-template-columns: 1fr;
+      }
+
+      .col-1-of-2:nth-child(1) {
+        max-width: 50%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &-cards {
+    @media only screen and (max-width: 64.125em) {
+      .col-1-of-3:nth-child(3) {
+        grid-column: 1/3 !important;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media only screen and (max-width: 58.25em) {
+      .col-1-of-3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .col-1-of-3:nth-child(3) {
+        grid-column: 1/2 !important;
+      }
+    }
+  }
+
+  &-testemonial {
+    padding-top: 10rem;
+    position: relative;
+    color: var(--color-white);
+
+    .heading-secondary {
+      position: relative;
+      z-index: 1;
+      top: -10rem;
+
+      @media only screen and (max-width: 58.25em) {
+        margin-bottom: 0rem !important;
+      }
+    }
+
+    &__bg {
+      position: absolute;
+      bottom: 0;
+      z-index: 0;
+      width: 100%;
+    }
+  }
+
+  &-subscribe {
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(
+      to right bottom,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+
+    @media only screen and (max-width: 58.25em) {
+      height: auto;
+    }
+  }
+
+  &--hidden {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+}

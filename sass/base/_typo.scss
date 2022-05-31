@@ -1,0 +1,68 @@
+.heading {
+  color: inherit;
+
+  &-primary {
+    &--main {
+      font-size: 7rem;
+      display: block;
+      font-weight: 400;
+      animation: slideLeft 2s;
+      letter-spacing: -1px;
+    }
+
+    &--sub {
+      font-size: 3rem;
+      font-weight: 100;
+      display: block;
+      animation: slideRight 2s;
+      letter-spacing: 1.5px;
+
+      span {
+        color: var(--color-primary);
+        display: inline-block;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &-secondary {
+    background-image: linear-gradient(
+      to right,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 4rem;
+    color: transparent;
+    text-transform: uppercase;
+
+    @media only screen and (min-width: 130em) {
+      font-size: 4.5rem;
+    }
+  }
+
+  &-tertiary {
+    font-size: 2.5rem;
+    color: var(--color-grey-dark-2);
+
+    @media only screen and (min-width: 130em) {
+      font-size: 3rem;
+    }
+  }
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  color: inherit;
+  line-height: 1.4;
+  font-weight: 400;
+
+  &:not(:last-child) {
+    margin-bottom: $mb-large;
+  }
+
+  @media only screen and (min-width: 130em) {
+    font-size: 2.2rem;
+  }
+}

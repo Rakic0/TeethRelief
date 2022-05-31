@@ -1,0 +1,37 @@
+.btn {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: 2rem 6rem;
+  background-color: var(--color-white);
+  border-radius: 50rem;
+  color: var(--color-grey-dark-2);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+
+  &--main {
+    font-size: 2rem;
+    color: var(--color-primary);
+
+    @media only screen and (min-width: 130em) {
+      font-size: 2.3rem;
+    }
+
+    &:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 1rem 1.5rem rgba(255, 255, 255, 0.2);
+    }
+
+    &:active {
+      transform: translateY(-1px) scale(1);
+      box-shadow: 0 1rem 1rem rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &--anim {
+    animation: slideTop 1s 2s;
+    animation-fill-mode: backwards;
+  }
+}

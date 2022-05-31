@@ -1,0 +1,34 @@
+:root {
+  --color-primary: #2998ff;
+  --color-primary-dark: #5643fa;
+  --color-primary-light: #55adff;
+
+  --color-secondary: #00c56a;
+  --color-secondary-dark: #009e55;
+  --color-secondary-light: #4dd697;
+
+  --color-grey-light-1: #f7f7f7;
+  --color-grey-light-2: #eee;
+
+  --color-grey-dark: #777;
+  --color-grey-dark-2: #444;
+  --color-grey-dark-3: #333;
+
+  --color-white: #fff;
+  --color-black: #000;
+
+  // FONT
+  --default-font-size: 1.6rem;
+}
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+// MARGIN
+
+$mb-small: 1rem;
+$mb-medium: 3rem;
+$mb-large: 5rem;

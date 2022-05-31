@@ -1,0 +1,36 @@
+.grid {
+  max-width: $grid-width;
+  margin: 0 auto;
+  display: grid;
+  gap: $gutter-horizontal;
+
+  @media only screen and (min-width: 130em) {
+    max-width: 135rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+
+  &--2-col {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media only screen and (max-width: 58.25em) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &--3-col {
+    grid-template-columns: repeat(3, 1fr);
+
+    @media only screen and (max-width: 64.125em) {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: 58.25em) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

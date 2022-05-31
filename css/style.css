@@ -569,11 +569,12 @@ body {
   height: auto;
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/hero.webp);
   background-size: cover;
-  background-position: top; }
+  background-position: top;
+  border-radius: 3px; }
   @media only screen and (max-width: 58.25em) {
     .subscribe {
       max-width: 50rem !important;
-      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../img/hero.webp); } }
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)); } }
   .subscribe__form {
     width: 50%;
     padding: 6rem; }
@@ -606,6 +607,8 @@ body {
         box-shadow: none; } }
     .form__input:focus:invalid {
       border-bottom: 3px solid #ff7730; }
+  .form__input::-webkit-input-placeholder {
+    color: var(--color-grey-dark-2); }
 
 .form__input:placeholder-shown + .form__label {
   opacity: 0;

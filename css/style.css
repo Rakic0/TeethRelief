@@ -601,6 +601,9 @@ body {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid #55e57a; }
+    @media only screen and (max-width: 26.6em) {
+      .form__input:focus {
+        box-shadow: none; } }
     .form__input:focus:invalid {
       border-bottom: 3px solid #ff7730; }
 
@@ -642,7 +645,7 @@ body {
   justify-content: center;
   transition: all 0.3s;
   z-index: 5; }
-  @media only screen and (max-width: 26.56em) {
+  @media only screen and (max-width: 26.6em) {
     .navigation__icon {
       top: auto;
       bottom: 5%;
@@ -665,7 +668,7 @@ body {
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   z-index: 4; }
-  @media only screen and (max-width: 26.56em) {
+  @media only screen and (max-width: 26.6em) {
     .navigation__overlay {
       top: auto;
       bottom: 6%;

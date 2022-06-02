@@ -160,6 +160,11 @@ body {
 .u-text-cnt {
   text-align: center; }
 
+.handwrite {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-grey-dark-3); }
+
 .btn {
   text-decoration: none;
   color: inherit;
@@ -246,6 +251,32 @@ body {
       border-radius: 1rem; }
   .gallery:hover .gallery__img:not(:hover) {
     transform: scale(0.95); }
+
+.feature {
+  background-image: url("../img/features.webp");
+  max-width: 114rem;
+  height: 50rem;
+  background-size: cover;
+  background-position: top;
+  margin: 0 auto;
+  border-radius: 3px; }
+  @media only screen and (max-width: 39.37em) {
+    .feature {
+      background-position: top;
+      background-image: url("../img/features-small.webp");
+      height: 70rem; } }
+  .feature__text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 40%;
+    margin-left: 5rem;
+    height: 100%; }
+    @media only screen and (max-width: 39.37em) {
+      .feature__text-box {
+        max-width: 65%;
+        margin: 0 auto; } }
 
 .card {
   perspective: 150rem;
@@ -385,7 +416,8 @@ body {
           margin-bottom: 3rem; }
         .card__side--back {
           transform: rotateY(0);
-          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%); }
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+          padding: 10rem 3rem; }
       .card:hover .card__side--front {
         transform: rotateY(0); } }
 
@@ -469,6 +501,8 @@ body {
     background-color: var(--color-white);
     padding: 1rem;
     font-size: 3rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -567,7 +601,7 @@ body {
   margin: 0 auto;
   max-width: 114rem;
   height: auto;
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/hero.webp);
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/hero-medium.webp);
   background-size: cover;
   background-position: top;
   border-radius: 3px; }
@@ -602,9 +636,6 @@ body {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid #55e57a; }
-    @media only screen and (max-width: 26.6em) {
-      .form__input:focus {
-        box-shadow: none; } }
     .form__input:focus:invalid {
       border-bottom: 3px solid #ff7730; }
   .form__input::-webkit-input-placeholder {
@@ -875,6 +906,10 @@ body {
     .section-about .col-1-of-2:nth-child(1) {
       max-width: 50%;
       margin: 0 auto; } }
+  .section-break {
+    text-align: center;
+    background-color: #efefef;
+    margin-top: 10rem; }
   @media only screen and (max-width: 64.125em) {
     .section-cards .col-1-of-3:nth-child(3) {
       grid-column: 1/3 !important;

@@ -8,7 +8,7 @@
       rgba(255, 255, 255, 0.9) 50%,
       transparent 50%
     ),
-    url(../img/hero.webp);
+    url(../img/hero-medium.webp);
   background-size: cover;
   background-position: top;
   border-radius: 3px;
@@ -55,10 +55,6 @@
       outline: none;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
       border-bottom: 3px solid #55e57a;
-
-      @media only screen and (max-width: 26.6em) {
-        box-shadow: none;
-      }
 
       &:invalid {
         border-bottom: 3px solid #ff7730;

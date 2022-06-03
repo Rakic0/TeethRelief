@@ -10,6 +10,10 @@
     height: auto;
   }
 
+  &-box {
+    position: relative;
+  }
+
   &__btn {
     border: none;
     background-color: var(--color-white);
@@ -23,9 +27,24 @@
     justify-content: center;
     position: absolute;
     cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+    }
 
     @media only screen and (max-width: 58.25em) {
       display: none;
+    }
+
+    &--icon {
+      fill: var(--color-grey-dark-2);
     }
 
     &--left {
@@ -63,18 +82,23 @@
 
 .slide {
   position: absolute;
-  top: 5rem;
   width: 100%;
-  height: 50rem;
+  height: 100%;
   transition: all 1s;
 
   @media only screen and (max-width: 58.25em) {
     position: static;
-    transform: translate(0) !important;
     height: auto;
+    transform: translate(0) !important;
 
     &:not(:last-child) {
       margin-bottom: 3rem;
+    }
+  }
+
+  @media only screen and (max-width: 58.25em) {
+    &:nth-child(2) {
+      display: none;
     }
   }
 
@@ -85,60 +109,66 @@
 
 .testemonial {
   padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  height: 100%;
 
-  @media only screen and (max-width: 109em) {
-    background-color: rgba(#000000, 0.2);
-    border-radius: 10px;
+  @media only screen and (max-width: 39.37em) {
+    grid-template-columns: 1fr;
   }
 
-  &__background {
-    @include cntrPos;
-    width: 100rem;
-    z-index: 0;
-  }
-
-  &__header {
+  .col-1-of-2 {
     position: relative;
-  }
+    background-color: #fff;
+    border-radius: 5px;
+    height: 100%;
+    color: var(--color-grey-dark-2);
+    padding: 7rem 5rem 5rem 5rem;
 
-  &__body {
-    width: 90%;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 
-  &__customer {
-    display: grid;
-    grid-template-columns: 6.5rem 1fr;
-    column-gap: 2rem;
-    @media only screen and (min-width: 130em) {
-      column-gap: 3.5rem;
+    &::after {
+      position: absolute;
+      content: '"';
+      top: -5%;
+      left: 5%;
+      font-size: 14rem;
+      font-family: "Secular One", sans-serif;
+      opacity: 0.5;
+      color: var(--color-primary);
     }
   }
 
-  &__customer-face {
+  &__review {
+    font-size: 1.7rem;
+    color: currentColor;
+    line-height: 1.3;
+  }
+
+  &__customer-box {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  &__customer__img {
+    grid-row: 1/3;
+    height: 6rem;
     width: 6rem;
     border-radius: 50%;
-    margin-right: $mb-small;
-    grid-row: 1/3;
-
-    @media only screen and (min-width: 130em) {
-      width: 8rem;
-      gap: 3rem;
-    }
   }
 
-  &__customer-name {
-    font-size: 2rem;
-
-    @media only screen and (min-width: 130em) {
-      font-size: 2.3rem;
-    }
+  &__customer__name {
+    font-size: 1.5rem;
+    font-weight: 500;
   }
 
-  &__customer-location {
-    font-size: 1.3rem;
-
-    @media only screen and (min-width: 130em) {
-      font-size: 1.6rem;
-    }
+  &__customer__location {
+    font-size: 1.4rem;
   }
 }
